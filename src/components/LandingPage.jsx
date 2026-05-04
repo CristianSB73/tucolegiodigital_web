@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { Helmet } from 'react-helmet'; // NUEVA IMPORTACIÓN PARA SEO
 
 // IMPORTACIÓN DE IMÁGENES
 import mobileImg1 from '../assets/celular_1.jpg';
@@ -44,6 +45,17 @@ const LandingPage = () => {
 
     return (
         <div style={{ fontFamily: "'Inter', 'Montserrat', sans-serif", backgroundColor: '#f8f9fa' }}>
+            
+            {/* ETIQUETAS SEO */}
+            <Helmet>
+                <title>Tu Colegio Digital | Plataforma de Gestión Escolar libClass</title>
+                <meta name="description" content="Descubre libClass de Tu Colegio Digital. La plataforma integral para colegios que conecta a docentes, alumnos y apoderados en tiempo real. Asesoría tecnológica desde Puerto Varas." />
+                <meta name="keywords" content="gestión escolar, software colegios, libClass, Tu Colegio Digital, portal de notas, educación Chile, Puerto Varas" />
+                <meta property="og:title" content="Tu Colegio Digital | Plataforma libClass" />
+                <meta property="og:description" content="La evolución que tu comunidad educativa estaba esperando. Todo en la nube, comunicación directa y reportes al instante." />
+                <meta property="og:type" content="website" />
+                <html lang="es-CL" />
+            </Helmet>
 
             {/* NAVBAR */}
             <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top px-3 py-3">
