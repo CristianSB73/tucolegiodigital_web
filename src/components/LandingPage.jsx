@@ -63,6 +63,9 @@ const LandingPage = () => {
                             <li className="nav-item me-3">
                                 <button className="nav-link btn btn-link text-dark text-decoration-none nav-custom-link" onClick={() => scrollToSection('solucion')}>Solución</button>
                             </li>
+                            <li className="nav-item me-3">
+                                <button className="nav-link btn btn-link text-dark text-decoration-none nav-custom-link" onClick={() => scrollToSection('proposito')}>Nosotros</button>
+                            </li>
                             <li className="nav-item me-4">
                                 <button className="nav-link btn btn-link text-dark text-decoration-none nav-custom-link" onClick={() => scrollToSection('contacto')}>Contacto</button>
                             </li>
@@ -208,8 +211,50 @@ const LandingPage = () => {
                 </div>
             </section>
 
+            {/* NUESTRO PROPÓSITO (QUIÉNES SOMOS) */}
+            <section id="proposito" className="py-5 bg-white">
+                <div className="container py-5">
+                    <div className="row align-items-center">
+                        <div className="col-lg-6 mb-5 mb-lg-0">
+                            <div className="pe-lg-5 text-center text-lg-start">
+                                <span className="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3 fw-bold tracking-wide">
+                                    <i className="bi bi-geo-alt-fill me-1"></i> Desde Puerto Varas al mundo
+                                </span>
+                                <h2 className="display-6 fw-bold text-dark mb-4">Nuestro Propósito</h2>
+                                <p className="lead text-secondary mb-4">
+                                    En <strong>Tu Colegio Digital</strong> creemos firmemente que la tecnología debe ser un puente, no un obstáculo.
+                                </p>
+                                <p className="text-muted fs-5 mb-4">
+                                    Nuestra plataforma, <strong>libClass</strong>, nace de la necesidad real de modernizar la gestión escolar. No somos solo una empresa de software; somos tus aliados tecnológicos. Nuestro objetivo es liberar a los equipos directivos y docentes de las tareas manuales y el papeleo interminable, permitiéndoles enfocarse en lo verdaderamente importante: <strong>educar y guiar a la próxima generación</strong>.
+                                </p>
+                                <div className="d-flex align-items-center justify-content-center justify-content-lg-start mt-4">
+                                    <div className="bg-light p-3 rounded-circle me-3 border">
+                                        <i className="bi bi-shield-check text-primary fs-3"></i>
+                                    </div>
+                                    <div className="text-start">
+                                        <h5 className="fw-bold mb-1">Compromiso y Seguridad</h5>
+                                        <p className="text-muted mb-0 small">La información de tu comunidad siempre protegida.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-6">
+                            <div className="bg-light rounded-5 p-1 shadow-sm border">
+                                <div className="rounded-4 overflow-hidden position-relative d-flex align-items-center justify-content-center" style={{ height: '400px', backgroundColor: '#e3e6f0' }}>
+                                    <i className="bi bi-people-fill text-primary opacity-25" style={{ fontSize: '10rem' }}></i>
+                                    <div className="position-absolute bottom-0 start-0 w-100 p-4 text-center bg-white bg-opacity-75" style={{ backdropFilter: 'blur(5px)' }}>
+                                        <h4 className="fw-bold mb-1 text-dark">Construyendo el futuro</h4>
+                                        <p className="text-dark mb-0 small">Junto a las comunidades educativas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* MOBILE SECTION */}
-            <section className="py-5 bg-white overflow-hidden">
+            <section className="py-5 overflow-hidden" style={{ backgroundColor: '#f8f9fa' }}>
                 <div className="container py-5">
                     <div className="row align-items-center">
                         <div className="col-lg-6 order-2 order-lg-1 mt-5 mt-lg-0 text-center">
@@ -245,7 +290,7 @@ const LandingPage = () => {
                             <h5 className="fw-bold mb-4 text-center text-md-start">¿Hablamos?</h5>
 
                             {sent ? (
-                                <div className="alert alert-success border-0 p-4 rounded-4 shadow-sm animate__animated animate__fadeIn">
+                                <div className="alert alert-success border-0 p-4 rounded-4 shadow-sm">
                                     <i className="bi bi-check-circle-fill me-2 fs-5"></i>
                                     ¡Mensaje enviado con éxito! Nos contactaremos pronto con tu institución.
                                 </div>
@@ -306,7 +351,7 @@ const LandingPage = () => {
             <style>{`
                 .feature-card:hover { transform: translateY(-10px); transition: all 0.3s ease; }
                 .hero-btn:hover { transform: translateY(-3px); box-shadow: 0 1rem 3rem rgba(78, 115, 223, 0.3) !important; transition: all 0.3s ease; }
-                .hero-btn-alt:hover { transform: translateY(-3px); background-color: #f8f9fa !important; transition: all 0.3s ease; }
+                .hero-btn-alt:hover { transform: translateY(-3px); background-color: #e2e6ea !important; transition: all 0.3s ease; }
                 .nav-custom-link { position: relative; transition: color 0.3s ease !important; padding-bottom: 5px; }
                 .nav-custom-link:hover { color: #4e73df !important; }
                 .nav-custom-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 50%; background-color: #4e73df; transition: all 0.3s ease; transform: translateX(-50%); }
