@@ -238,13 +238,15 @@ const LandingPage = () => {
                 <div className="container py-5">
                     <div className="row align-items-center">
                         <div className="col-lg-6 order-2 order-lg-1 mt-5 mt-lg-0 text-center">
-                            <div className="position-relative mx-auto" style={{ maxWidth: '400px', height: '550px' }}> 
+                            <div className="position-relative mx-auto" style={{ maxWidth: '400px', height: '550px' }}>
                                 <img src={mobileImg2} alt="Móvil 2" className="img-fluid rounded-5 shadow-sm border border-4 border-secondary position-absolute" style={{ width: '240px', zIndex: 1, right: '10px', top: '60px', opacity: '0.8', transform: 'rotate(5deg)' }} />
                                 <img src={mobileImg1} alt="Móvil 1" className="img-fluid rounded-5 shadow-lg border border-4 border-dark position-absolute" style={{ width: '270px', zIndex: 2, left: '20px', top: '0' }} />
                             </div>
                         </div>
                         <div className="col-lg-6 order-1 order-lg-2 text-center text-lg-start px-lg-5">
-                            <h2 className="display-5 fw-bold mb-4">El colegio en el bolsillo del apoderado.</h2>
+                            <h2 className="display-5 fw-bold mb-4 text-dark" style={{ lineHeight: '1.2' }}>
+                                <span style={{ color: '#4e73df' }}>El colegio</span> en el bolsillo del apoderado.
+                            </h2>
                             <p className="lead text-muted mb-4">Mejora la relación con la comunidad. Desde su celular, los padres podrán revisar el rendimiento de sus hijos y mantener sus pagos al día en 3 clics.</p>
                             <ul className="list-unstyled fs-5 text-muted">
                                 <li className="mb-2"><i className="bi bi-check-circle-fill text-primary me-2"></i> Ver notas y asistencia en tiempo real.</li>
