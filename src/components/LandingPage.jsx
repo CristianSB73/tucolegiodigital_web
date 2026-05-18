@@ -238,7 +238,7 @@ const LandingPage = () => {
                 <div className="container py-5">
                     <div className="row align-items-center">
                         <div className="col-lg-6 order-2 order-lg-1 mt-5 mt-lg-0 text-center">
-                            <div className="position-relative mx-auto" style={{ maxWidth: '400px', height: '550px' }}>
+                            <div className="position-relative mx-auto" style={{ maxWidth: '400px', height: '550px' }}> 
                                 <img src={mobileImg2} alt="Móvil 2" className="img-fluid rounded-5 shadow-sm border border-4 border-secondary position-absolute" style={{ width: '240px', zIndex: 1, right: '10px', top: '60px', opacity: '0.8', transform: 'rotate(5deg)' }} />
                                 <img src={mobileImg1} alt="Móvil 1" className="img-fluid rounded-5 shadow-lg border border-4 border-dark position-absolute" style={{ width: '270px', zIndex: 2, left: '20px', top: '0' }} />
                             </div>
