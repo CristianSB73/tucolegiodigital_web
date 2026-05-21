@@ -49,11 +49,15 @@ const LandingPage = () => {
         <div style={{ fontFamily: "'Inter', 'Montserrat', sans-serif", backgroundColor: '#f8f9fa' }}>
 
             {/* ETIQUETAS SEO */}
+            {/* ETIQUETAS SEO */}
             <Helmet>
                 <title>Tu Colegio Digital | El Ecosistema Escolar Definitivo</title>
                 <meta name="description" content="Descubre el ecosistema Tu Colegio Digital. Gestión académica con libClass y recaudación financiera con Kódeca, sincronizados en tiempo real. Desde Puerto Varas." />
                 <meta name="keywords" content="gestión escolar, software colegios, libClass, Kodeca, portal de notas, recaudación colegios, educación Chile, Puerto Varas" />
                 <html lang="es-CL" />
+                
+                {/* 🔥 ESTA ES LA LÍNEA MÁGICA QUE FALTA 🔥 */}
+                <link rel="canonical" href="https://www.tucolegiodigital.cl/" />
             </Helmet>
 
             {/* NAVBAR */}
