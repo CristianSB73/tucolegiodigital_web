@@ -48,11 +48,11 @@ const LandingPage = () => {
     return (
         <div style={{ fontFamily: "'Inter', 'Montserrat', sans-serif", backgroundColor: '#f8f9fa' }}>
 
-            {/* ETIQUETAS SEO */}
+            {/* ETIQUETAS SEO ACTUALIZADAS */}
             <Helmet>
                 <title>Tu Colegio Digital | El Ecosistema Escolar Definitivo</title>
-                <meta name="description" content="Descubre el ecosistema Tu Colegio Digital. Gestión académica con libClass y recaudación financiera con Kódeca, sincronizados en tiempo real. Cumplimiento total MINEDUC." />
-                <meta name="keywords" content="gestión escolar, software colegios, libClass, Kodeca, portal de notas, recaudación colegios, educación Chile, Puerto Varas, Decreto 67, Circular 30, MINEDUC" />
+                <meta name="description" content="Descubre Tu Colegio Digital. Gestión académica (libClass), recaudación financiera (Kódeca), Inteligencia Artificial para docentes y seguimiento GPS de furgones escolares." />
+                <meta name="keywords" content="gestión escolar, software colegios, libClass, Kodeca, Inteligencia artificial educación, seguimiento furgón escolar, GPS colegios, Decreto 67, MINEDUC" />
                 <html lang="es-CL" />
                 <link rel="canonical" href="https://www.tucolegiodigital.cl/" />
             </Helmet>
@@ -72,8 +72,12 @@ const LandingPage = () => {
                             <li className="nav-item me-3">
                                 <button className="nav-link btn btn-link text-dark text-decoration-none nav-custom-link" onClick={() => scrollToSection('ecosistema')}>El Ecosistema</button>
                             </li>
+                            {/* NUEVO ENLACE EN EL NAVBAR */}
                             <li className="nav-item me-3">
-                                <button className="nav-link btn btn-link text-dark text-decoration-none nav-custom-link" onClick={() => scrollToSection('cumplimiento')}>Normativa MINEDUC</button>
+                                <button className="nav-link btn btn-link text-dark text-decoration-none nav-custom-link" onClick={() => scrollToSection('innovacion')}>Innovación</button>
+                            </li>
+                            <li className="nav-item me-3">
+                                <button className="nav-link btn btn-link text-dark text-decoration-none nav-custom-link" onClick={() => scrollToSection('cumplimiento')}>Normativa</button>
                             </li>
                             <li className="nav-item me-3">
                                 <button className="nav-link btn btn-link text-dark text-decoration-none nav-custom-link" onClick={() => scrollToSection('proposito')}>Nosotros</button>
@@ -199,7 +203,50 @@ const LandingPage = () => {
                 </div>
             </section>
 
-            {/* 🔥 NUEVA SECCIÓN: CUMPLIMIENTO MINEDUC 🔥 */}
+            {/* 🔥 NUEVA SECCIÓN: INNOVACIÓN (IA Y FURGÓN ESCOLAR) 🔥 */}
+            <section id="innovacion" className="py-5" style={{ backgroundColor: '#f8f9fa' }}>
+                <div className="container py-5">
+                    <div className="text-center mb-5 pb-3">
+                        <span className="badge bg-warning text-dark px-3 py-2 rounded-pill mb-3 fw-bold fs-6 shadow-sm border border-warning">
+                            <i className="bi bi-stars me-1"></i> Herramientas del futuro, hoy
+                        </span>
+                        <h2 className="fw-bold text-dark display-5 mb-3">Más allá del libro de clases</h2>
+                        <p className="text-muted fs-5 mx-auto" style={{ maxWidth: '800px' }}>
+                            Destaca entre los colegios de tu región. Tu Colegio Digital incluye módulos exclusivos que resuelven los dolores más profundos de tu comunidad educativa.
+                        </p>
+                    </div>
+
+                    <div className="row g-4 justify-content-center">
+                        {/* Tarjeta Asistente IA */}
+                        <div className="col-lg-6">
+                            <div className="card h-100 border-0 shadow-sm rounded-4 p-5 feature-card bg-white text-center">
+                                <div className="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style={{ width: '90px', height: '90px' }}>
+                                    <i className="bi bi-cpu-fill fs-1 text-primary"></i>
+                                </div>
+                                <h3 className="fw-bold mb-3">Asistente de Planificación con IA</h3>
+                                <p className="text-muted fs-5 mb-0">
+                                    <strong>Devuélvele el fin de semana a tus profesores.</strong> Nuestro motor cognitivo genera borradores de pruebas y guías alineadas al currículum en segundos, listas para imprimir en PDF o publicar en línea al instante.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Tarjeta Tracking Furgón */}
+                        <div className="col-lg-6">
+                            <div className="card h-100 border-0 shadow-sm rounded-4 p-5 feature-card bg-white text-center">
+                                <div className="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style={{ width: '90px', height: '90px' }}>
+                                    <i className="bi bi-bus-front-fill fs-1 text-success"></i>
+                                </div>
+                                <h3 className="fw-bold mb-3">Seguimiento Logístico del Furgón</h3>
+                                <p className="text-muted fs-5 mb-0">
+                                    <strong>Seguridad que da tranquilidad.</strong> App con seguimiento GPS en tiempo real de los furgones escolares. Permite que el colegio y los apoderados sepan exactamente dónde están los estudiantes durante su traslado.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* SECCIÓN: CUMPLIMIENTO MINEDUC */}
             <section id="cumplimiento" className="py-5" style={{ backgroundColor: '#f0f4fc' }}>
                 <div className="container py-5">
                     <div className="text-center mb-5 pb-3">
@@ -298,8 +345,8 @@ const LandingPage = () => {
                             <ul className="list-unstyled fs-5 text-muted">
                                 <li className="mb-2"><i className="bi bi-check-circle-fill text-primary me-2"></i> Ver notas y asistencia en tiempo real.</li>
                                 <li className="mb-2"><i className="bi bi-check-circle-fill text-success me-2"></i> Pagar aranceles online con Mercado Pago.</li>
-                                <li className="mb-2"><i className="bi bi-check-circle-fill text-info me-2"></i> Descargar certificados sin hacer filas.</li>
-                                <li className="mb-2"><i className="bi bi-check-circle-fill text-secondary me-2"></i> Diseño 100% responsivo y rápido.</li>
+                                <li className="mb-2"><i className="bi bi-check-circle-fill text-info me-2"></i> Seguimiento GPS del furgón escolar.</li>
+                                <li className="mb-2"><i className="bi bi-check-circle-fill text-secondary me-2"></i> Descargar certificados sin hacer filas.</li>
                             </ul>
                         </div>
                     </div>
