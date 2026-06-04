@@ -182,3 +182,167 @@
     border-right-color: var(--border);
   }
 }
+
+/* ==========================================================================
+   ESTILOS DE LA LANDING PAGE "TU COLEGIO DIGITAL"
+   ========================================================================== */
+
+/* Prevenir scroll horizontal */
+body, html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+.image-hover-wrapper img {
+  transition: transform 0.5s ease;
+}
+.image-hover-wrapper:hover img {
+  transform: scale(1.02);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-card-dark {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.hero-btn {
+  transition: all 0.3s ease;
+}
+.hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 3rem rgba(78, 115, 223, 0.4) !important;
+}
+
+.hero-btn-alt {
+  transition: all 0.3s ease;
+}
+.hero-btn-alt:hover {
+  transform: translateY(-3px);
+  background-color: #f1f3f5 !important;
+}
+
+.btn-hover-effect {
+  transition: all 0.2s ease;
+}
+.btn-hover-effect:active {
+  transform: scale(0.98);
+}
+
+.nav-custom-link {
+  position: relative;
+  transition: color 0.3s ease !important;
+  padding-bottom: 5px;
+}
+.nav-custom-link:hover {
+  color: #4e73df !important;
+}
+.nav-custom-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #4e73df;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+.nav-custom-link:hover::after {
+  width: 100%;
+}
+
+.focus-ring:focus {
+  box-shadow: 0 0 0 0.25rem rgba(78, 115, 223, 0.25);
+  border-color: #4e73df;
+}
+
+/* ESTILOS BASE CELULARES MÓVILES */
+.mobile-mockup-wrapper {
+  height: 550px;
+  max-width: 400px;
+}
+.mobile-img-back {
+  width: 240px;
+  z-index: 1;
+  right: 10px;
+  top: 60px;
+  opacity: 0.8;
+  transform: rotate(5deg);
+}
+.mobile-img-front {
+  width: 270px;
+  z-index: 2;
+  left: 20px;
+  top: 0;
+}
+
+/* ==========================================================================
+   RESPONSIVE AJUSTES (TABLETS Y MÓVILES)
+   ========================================================================== */
+
+@media (max-width: 991px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  /* Ocultar tarjeta flotante en Hero para evitar superposición extraña en pantallas muy chicas */
+  .glass-card {
+    display: none !important;
+  }
+
+  /* Ajustes márgenes de imágenes */
+  .mockup-img {
+    margin-top: 2rem;
+  }
+
+  /* Ajustes Celulares Móviles */
+  .mobile-mockup-wrapper {
+    height: 400px;
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+  .mobile-img-back {
+    width: 180px;
+    right: 10%;
+    top: 40px;
+  }
+  .mobile-img-front {
+    width: 200px;
+    left: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes ultra-pequeños para Celulares Móviles */
+  .mobile-mockup-wrapper {
+    height: 350px;
+  }
+  .mobile-img-back {
+    width: 150px;
+    right: 5%;
+  }
+  .mobile-img-front {
+    width: 170px;
+    left: 5%;
+  }
+}
