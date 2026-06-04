@@ -112,11 +112,12 @@ const LandingPage = () => {
                             className="col-lg-6 text-center text-lg-start pe-lg-5"
                             initial="hidden" animate="visible" variants={fadeRight}
                         >
-                            <span className="badge bg-success bg-opacity-10 text-success px-3 py-2 rounded-pill mb-3 fw-bold tracking-wide border border-success">
-                                <i className="bi bi-shield-fill-check me-1"></i> 100% Digital, Seguro y Alineado a MINEDUC
+                            <span className="badge bg-white text-dark px-3 py-2 rounded-pill mb-3 fw-bold tracking-wide border shadow-sm" style={{ zIndex: 10, position: 'relative' }}>
+                                <i className="bi bi-shield-fill-check text-success me-2 fs-6"></i>
+                                100% Digital, Seguro y Alineado a MINEDUC
                             </span>
-                            <h1 className="display-4 fw-bold text-dark mb-4" style={{ lineHeight: '1.1' }}>
-                                El cerebro y el corazón de tu colegio, <span style={{ color: '#4e73df' }}>en un solo ecosistema.</span>
+                            <h1 className="display-4 fw-bold text-dark mb-4 hero-title position-relative" style={{ lineHeight: '1.1', zIndex: 10 }}>
+                                El cerebro y el corazón de tu colegio, <span style={{ color: '#2b4492' }}>en un solo ecosistema.</span>
                             </h1>
                             <p className="lead text-secondary mb-5 fs-5">
                                 Conecta a docentes, alumnos y apoderados en tiempo real. Olvídate de la doble digitación sincronizando el <strong>control académico (libClass)</strong> con tu <strong>recaudación online (Kódeca)</strong>.
