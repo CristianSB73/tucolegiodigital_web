@@ -10,6 +10,7 @@ import dashboardMockup from '../assets/dashboard.png';
 import kodecaMockup from '../assets/kodeca_dashboard.png';
 import logoLibClass from '../assets/libclass_logo.png';
 import logoKodeca from '../assets/kodeca_logo.png';
+import logoPrincipal from '../assets/tucolegiodigital4.png';
 
 const LandingPage = () => {
     const form = useRef();
@@ -69,13 +70,15 @@ const LandingPage = () => {
             <html lang="es-CL" />
             <link rel="canonical" href="https://www.tucolegiodigital.cl/" />
 
-
             {/* NAVBAR */}
             <nav className="navbar navbar-expand-lg navbar-light bg-white bg-opacity-90 shadow-sm fixed-top px-3 py-3" style={{ backdropFilter: 'blur(10px)' }}>
                 <div className="container">
-                    <a className="navbar-brand fw-bold d-flex align-items-center" href="#" style={{ color: '#4e73df' }}>
-                        <i className="bi bi-mortarboard-fill me-2 fs-3"></i>
-                        Tu Colegio Digital
+                    <a className="navbar-brand d-flex align-items-center" href="#">
+                        <img
+                            src={logoPrincipal}
+                            alt="Logo Tu Colegio Digital"
+                            style={{ height: '80px', width: 'auto', objectFit: 'contain' }}
+                        />
                     </a>
                     <button className="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                         <span className="navbar-toggler-icon"></span>
@@ -276,7 +279,6 @@ const LandingPage = () => {
 
             {/* NUEVO DISEÑO: NOSOTROS / PROPÓSITO */}
             <section id="proposito" className="py-5 position-relative overflow-hidden" style={{ backgroundColor: '#ffffff' }}>
-                {/* Elemento decorativo de fondo animado/difuminado */}
                 <div className="position-absolute top-50 start-0 translate-middle-y rounded-circle bg-primary opacity-10 blur-circle d-none d-lg-block" style={{ width: '600px', height: '600px', filter: 'blur(80px)', zIndex: 0 }}></div>
 
                 <div className="container py-5 position-relative" style={{ zIndex: 1 }}>
@@ -291,7 +293,6 @@ const LandingPage = () => {
                     </motion.div>
 
                     <div className="row g-4 mt-2">
-                        {/* Tarjeta 1: Innovación */}
                         <motion.div className="col-lg-4" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}>
                             <div className="card h-100 border-0 shadow-sm rounded-4 p-4 hover-lift" style={{ backgroundColor: '#f8f9fa' }}>
                                 <div className="bg-white rounded-circle d-flex align-items-center justify-content-center mb-4 shadow-sm" style={{ width: '60px', height: '60px' }}>
@@ -302,7 +303,6 @@ const LandingPage = () => {
                             </div>
                         </motion.div>
 
-                        {/* Tarjeta 2: Soporte (Destacada en Azul) */}
                         <motion.div className="col-lg-4" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.3 }}>
                             <div className="card h-100 border-0 shadow-lg rounded-4 p-4 hover-lift bg-primary text-white" style={{ transform: 'scale(1.03)', zIndex: 2 }}>
                                 <div className="bg-white bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center mb-4" style={{ width: '60px', height: '60px' }}>
@@ -313,7 +313,6 @@ const LandingPage = () => {
                             </div>
                         </motion.div>
 
-                        {/* Tarjeta 3: Seguridad */}
                         <motion.div className="col-lg-4" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.5 }}>
                             <div className="card h-100 border-0 shadow-sm rounded-4 p-4 hover-lift" style={{ backgroundColor: '#f8f9fa' }}>
                                 <div className="bg-white rounded-circle d-flex align-items-center justify-content-center mb-4 shadow-sm" style={{ width: '60px', height: '60px' }}>
@@ -374,7 +373,10 @@ const LandingPage = () => {
                 <div className="container">
                     <div className="row justify-content-between mb-5">
                         <div className="col-lg-5 mb-4 mb-lg-0 text-center text-md-start">
-                            <h3 className="fw-bold mb-3"><i className="bi bi-mortarboard-fill me-2" style={{ color: '#4e73df' }}></i> Tu Colegio Digital</h3>
+                            {/* Aquí luce el Logo Oficial de forma elegante */}
+                            <div className="mb-4 d-inline-block bg-white p-2 rounded-4 shadow-sm">
+                                <img src={logoPrincipal} alt="Logo Tu Colegio Digital" style={{ height: '70px', width: 'auto' }} />
+                            </div>
                             <p className="text-white-50 fs-5 mb-4">"Transformando la educación a través de la tecnología."</p>
                             <p className="text-white-50 mb-1"><i className="bi bi-envelope me-2"></i> contacto@tucolegiodigital.cl</p>
                             <p className="text-white-50"><i className="bi bi-geo-alt me-2"></i> Puerto Varas, Región de Los Lagos</p>
