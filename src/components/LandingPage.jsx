@@ -106,7 +106,7 @@ const LandingPage = () => {
             </nav>
 
             {/* HERO SECTION */}
-            <section className="d-flex align-items-center position-relative overflow-hidden" style={{ minHeight: '100vh', paddingTop: '140px', backgroundColor: '#f8f9fa' }}>
+            <section className="d-flex align-items-center position-relative overflow-hidden" style={{ minHeight: '100vh', paddingTop: window.innerWidth < 768 ? '100px' : '140px', backgroundColor: '#f8f9fa' }}>
                 <div className="position-absolute top-0 end-0 translate-middle-y rounded-circle bg-primary opacity-10 blur-circle" style={{ width: '800px', height: '800px', zIndex: 0, filter: 'blur(80px)' }}></div>
 
                 <div className="container position-relative" style={{ zIndex: 1 }}>
