@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 import '../App.css';
 
-// IMPORTACIÓN DE IMÁGENES (Asegúrate de mantener tus rutas)
+// IMPORTACIÓN DE IMÁGENES
 import mobileImg1 from '../assets/celular_1.jpg';
 import mobileImg2 from '../assets/celular_2.jpg';
 import dashboardMockup from '../assets/dashboard.png';
@@ -178,7 +178,7 @@ const LandingPage = () => {
                             <ul className="list-unstyled mb-4">
                                 <li className="mb-3 d-flex"><i className="bi bi-check-circle-fill text-primary me-3 fs-5"></i> <span><strong>Portal de Notas:</strong> Cálculo automático y reportes dinámicos.</span></li>
                                 <li className="mb-3 d-flex"><i className="bi bi-check-circle-fill text-primary me-3 fs-5"></i> <span><strong>Libro de Clases Digital:</strong> Control de asistencia en segundos y sin errores.</span></li>
-                                <li className="d-flex"><i className="bi bi-check-circle-fill text-primary me-3 fs-5"></i> <span><strong>Certificados Online:</strong> Descarga inmediata de documentación oficial.</span></li>
+                                <li className="mb-3 d-flex"><i className="bi bi-check-circle-fill text-primary me-3 fs-5"></i> <span><strong>Certificados Online:</strong> Descarga inmediata de documentación oficial.</span></li>
                             </ul>
                         </motion.div>
                         <motion.div className="col-lg-6 text-center" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeLeft}>
@@ -212,7 +212,7 @@ const LandingPage = () => {
                 </div>
             </section>
 
-            {/* INNOVACIÓN */}
+            {/* INNOVACIÓN: AGREGADO EL MOTOR DE HORARIOS CON IA */}
             <section id="innovacion" className="py-5" style={{ backgroundColor: '#f0f4fc' }}>
                 <div className="container py-5">
                     <motion.div className="text-center mb-5 pb-3" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
@@ -227,16 +227,17 @@ const LandingPage = () => {
 
                     <div className="row g-4 justify-content-center">
                         {[
-                            { icon: 'bi-cpu-fill', color: 'primary', title: 'Asistente de Planificación con IA', desc: 'Nuestro motor cognitivo genera borradores de pruebas y guías alineadas al currículum en segundos, listas para imprimir en PDF.' },
+                            { icon: 'bi-cpu-fill', color: 'primary', title: 'Asistente de Planificación con IA', desc: 'Nuestro motor cognitivo genera borradores de pruebas y guías alineadas al currículum en segundos, listas para inyectar en la planilla docente.' },
+                            { icon: 'bi-calendar3', color: 'indigo', title: 'Motor de Horarios Institucionales con IA', desc: 'Resuelve el rompecabezas de marzo en segundos. Gemini distribuye las cargas completas del colegio respetando contratos y horas de profes taxi sin un solo tope.' },
                             { icon: 'bi-bus-front-fill', color: 'success', title: 'Seguimiento Logístico del Furgón', desc: 'App con seguimiento GPS en tiempo real. Permite que el colegio y los apoderados sepan exactamente dónde están los estudiantes.' }
                         ].map((item, index) => (
-                            <motion.div className="col-lg-6" key={index} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} transition={{ delay: index * 0.2 }}>
-                                <div className="card h-100 border-0 shadow-sm rounded-4 p-5 feature-card bg-white text-center hover-lift">
-                                    <div className={`bg-${item.color} bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4`} style={{ width: '90px', height: '90px' }}>
-                                        <i className={`bi ${item.icon} fs-1 text-${item.color}`}></i>
+                            <motion.div className="col-lg-4 col-md-6" key={index} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} transition={{ delay: index * 0.2 }}>
+                                <div className="card h-100 border-0 shadow-sm rounded-4 p-4 feature-card bg-white text-center hover-lift">
+                                    <div className={`bg-${item.color || 'primary'} bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4`} style={{ width: '80px', height: '80px' }}>
+                                        <i className={`bi ${item.icon} fs-2 ${item.color === 'indigo' ? 'text-indigo' : `text-${item.color}`}`} style={item.color === 'indigo' ? {color: '#4e73df'} : {}}></i>
                                     </div>
-                                    <h3 className="fw-bold mb-3">{item.title}</h3>
-                                    <p className="text-muted fs-5 mb-0">{item.desc}</p>
+                                    <h4 className="fw-bold mb-3" style={{ fontSize: '1.35rem' }}>{item.title}</h4>
+                                    <p className="text-muted small mb-0" style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>{item.desc}</p>
                                 </div>
                             </motion.div>
                         ))}
@@ -244,12 +245,12 @@ const LandingPage = () => {
                 </div>
             </section>
 
-            {/* SECCIÓN: CUMPLIMIENTO MINEDUC */}
+            {/* SECCIÓN: CUMPLIMIENTO MINEDUC REFORZADA CON LA CIRCULAR N°30 */}
             <section id="cumplimiento" className="py-5" style={{ backgroundColor: '#ffffff' }}>
                 <div className="container py-5">
                     <motion.div className="text-center mb-5 pb-3" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
                         <span className="badge bg-primary text-white px-3 py-2 rounded-pill mb-3 fw-bold fs-6 shadow-sm">
-                            <i className="bi bi-shield-lock-fill me-1"></i> Cero Multas, Cero Estrés
+                            <i className="bi bi-param me-1"></i> Cero Multas, Cero Estrés
                         </span>
                         <h2 className="fw-bold text-dark display-6 mb-3">Blindados ante la Superintendencia</h2>
                         <p className="text-muted fs-5 mx-auto" style={{ maxWidth: '800px' }}>
@@ -259,9 +260,9 @@ const LandingPage = () => {
 
                     <div className="row g-4 justify-content-center">
                         {[
-                            { icon: 'bi-fingerprint', color: 'primary', title: 'Firma Electrónica', desc: 'Cumplimiento total de la Circular N°30. Integración de doble factor dando validez legal absoluta a las actas.' },
-                            { icon: 'bi-clipboard2-check-fill', color: 'success', title: 'Decreto 67', desc: 'Módulo integrado para definir evaluaciones formativas o sumativas, generando la trazabilidad que exige el Ministerio.' },
-                            { icon: 'bi-database-check', color: 'danger', title: 'Auditoría Inmutable', desc: 'Un registro inalterable graba cada acción. Trazabilidad de IP y dispositivo para responder ante cualquier fiscalización.' }
+                            { icon: 'bi-fingerprint', color: 'primary', title: 'Circular N°30 e Historial Blindado', desc: 'Firma electrónica avanzada por doble factor (MFA) para el cierre definitivo de actas. Las notas guardadas se sellan bajo huella criptográfica inmutable.' },
+                            { icon: 'bi-shield-exclamation', color: 'warning', title: 'Auditoría de Cambios (UTP)', desc: 'Cualquier modificación posterior de notas exige un flujo transparente regulado: el docente envía el motivo pedagógico y UTP autoriza con firma digital.' },
+                            { icon: 'bi-clipboard2-check-fill', color: 'success', title: 'Decreto 67 Integrado', desc: 'Planificación estricta de evaluaciones formativas y sumativas directamente vinculadas al libro de clases, facilitando la trazabilidad que exige el Ministerio.' }
                         ].map((item, index) => (
                             <motion.div className="col-lg-4 col-md-6" key={index} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} transition={{ delay: index * 0.2 }}>
                                 <div className="card h-100 border-0 shadow-sm rounded-4 p-4 feature-card bg-light hover-lift">
@@ -269,7 +270,7 @@ const LandingPage = () => {
                                         <i className={`bi ${item.icon} fs-2 text-${item.color}`}></i>
                                     </div>
                                     <h4 className="fw-bold mb-3">{item.title}</h4>
-                                    <p className="text-muted mb-0">{item.desc}</p>
+                                    <p className="text-muted mb-0" style={{ fontSize: '0.95rem' }}>{item.desc}</p>
                                 </div>
                             </motion.div>
                         ))}
@@ -277,7 +278,7 @@ const LandingPage = () => {
                 </div>
             </section>
 
-            {/* NUEVO DISEÑO: NOSOTROS / PROPÓSITO */}
+            {/* SECCIÓN: NOSOTROS / PROPÓSITO */}
             <section id="proposito" className="py-5 position-relative overflow-hidden" style={{ backgroundColor: '#ffffff' }}>
                 <div className="position-absolute top-50 start-0 translate-middle-y rounded-circle bg-primary opacity-10 blur-circle d-none d-lg-block" style={{ width: '600px', height: '600px', filter: 'blur(80px)', zIndex: 0 }}></div>
 
@@ -373,7 +374,6 @@ const LandingPage = () => {
                 <div className="container">
                     <div className="row justify-content-between mb-5">
                         <div className="col-lg-5 mb-4 mb-lg-0 text-center text-md-start">
-                            {/* Aquí luce el Logo Oficial de forma elegante */}
                             <div className="mb-4 d-inline-block bg-white p-2 rounded-4 shadow-sm">
                                 <img src={logoPrincipal} alt="Logo Tu Colegio Digital" style={{ height: '70px', width: 'auto' }} />
                             </div>
@@ -386,7 +386,7 @@ const LandingPage = () => {
                             {sent ? (
                                 <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="alert alert-success border-0 p-4 rounded-4 shadow-sm">
                                     <i className="bi bi-check-circle-fill me-2 fs-5"></i>
-                                    ¡Mensaje enviado con éxito! Nos contactaremos pronto con tu institución.
+                                    ¡Mensaje enviado con éxito! Nos contactaremos pronto con tu institution.
                                 </motion.div>
                             ) : (
                                 <form ref={form} onSubmit={sendEmail} className="bg-dark p-4 rounded-4 shadow-sm border border-secondary">
